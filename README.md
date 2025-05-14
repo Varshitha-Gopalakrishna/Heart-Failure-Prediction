@@ -32,9 +32,12 @@ This project predicts the likelihood of heart failure based on patient data usin
   "Oldpeak": 1.5,
   "ST_Slope": "Flat"
 }
+```
+
 ---
 
 ## 🗂️ Project Structure
+
 ├── app/
 │   ├── __init__.py
 │   ├── routes.py
@@ -55,24 +58,30 @@ This project predicts the likelihood of heart failure based on patient data usin
 ├── test_api.py
 ├── test_post.py
 └── README.md
+
 ---
 
 ## ☁️ Deployment Details
 
 🔹 Flask API on AWS EC2 (Free Tier)
 🔹 Streamlit App on Streamlit Cloud
+
 ---
 
 ## 🚀 Live Demo
 Try out the deployed Heart Failure Prediction web app here:  
 🔗 http://13.229.230.138:8501/
+
 ---
 
-✍️ Author
-Varshitha Gopalakrishna
-LinkedIn | GitHub
----
-
-📄 License
+## 📄 License
 This project is for educational/demo purposes.
+
+---
+
+## ✍️ Author
+Varshitha G
+LinkedIn: https://linkedin.com/in/varshitha-gopalakrishna 
+GitHub: http://github.com/Varshitha-Gopalakrishna
+
 ---
