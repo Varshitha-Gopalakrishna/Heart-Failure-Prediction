@@ -66,3 +66,6 @@ This project predicts the likelihood of heart failure based on patient data usin
 ✍️ Author
 Varshitha Gopalakrishna
 LinkedIn | GitHub
+
+📄 License
+This project is for educational/demo purposes.
