@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 # Load dataset
 df = pd.read_csv("data/heart.csv")
 
-# Columns to encode
+# Columns to encode (with strings)
 categorical_cols = ['Sex', 'ChestPainType', 'RestingECG', 'ExerciseAngina', 'ST_Slope']
 
 # Encode categoricals
@@ -26,10 +26,10 @@ y = df["HeartDisease"]
 scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split
+# Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Model training
+# Train model
 model = RandomForestClassifier(random_state=42)
 model.fit(X_train, y_train)
 
@@ -37,12 +37,10 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 
-# Save model, scaler, encoders
+# Save model, scaler, and encoders
 with open("models/model.pkl", "wb") as f:
     dill.dump(model, f)
-
 with open("models/scaler.pkl", "wb") as f:
     dill.dump(scaler, f)
-
 with open("models/encoders.pkl", "wb") as f:
     dill.dump(encoders, f)

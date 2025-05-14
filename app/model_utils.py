@@ -13,6 +13,7 @@ def load_model_and_preprocessors():
 def preprocess_input(data, encoders, scaler):
     try:
         input_df = pd.DataFrame([data])
+        # Encode using saved encoders
         for col, encoder in encoders.items():
             if col in input_df.columns:
                 input_df[col] = encoder.transform(input_df[col])
