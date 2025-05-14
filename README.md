@@ -1,31 +1,66 @@
-# Heart Failure Prediction
+# 💓 Heart Failure Prediction App
 
-A machine learning web application that predicts whether a person is likely to have heart disease based on their health indicators such as age, chest pain type, blood pressure, cholesterol, ECG, etc.
+This project predicts the likelihood of heart failure based on patient data using a machine learning model. It features a RESTful Flask API deployed on AWS EC2 and an interactive Streamlit frontend deployed on Streamlit Cloud.
 
-## 📁 Project Structure
+---
 
-Heart-Failure-Prediction/
-│
+## 📌 Project Overview
+
+- 🧠 **Machine Learning Model**: Trained on heart disease data with preprocessing (LabelEncoding, Scaling) and optimized using XGBoost.
+- ⚙️ **Backend**: Flask API to serve predictions.
+- 🖼️ **Frontend**: Streamlit app to collect user input and display results.
+- ☁️ **Deployment**: 
+  - **Flask API** on **AWS EC2** (Free Tier)
+  - **Streamlit App** on **Streamlit Cloud**
+- 📁 **Organized project structure** with modular code.
+
+---
+
+## 🧪 Sample Prediction Input
+
+```json
+{
+  "Age": 60,
+  "Sex": "M",
+  "ChestPainType": "ASY",
+  "RestingBP": 140,
+  "Cholesterol": 250,
+  "FastingBS": 0,
+  "RestingECG": "Normal",
+  "MaxHR": 150,
+  "ExerciseAngina": "N",
+  "Oldpeak": 1.5,
+  "ST_Slope": "Flat"
+}
+---
+
+## 🗂️ Project Structure
 ├── app/
-│ └── streamlit_app.py # Streamlit UI code
-│
-├── data/
-│ └── heart.csv # Original dataset
-│
+│   ├── __init__.py
+│   ├── routes.py
+│   └── model_utils.py
 ├── models/
-│ ├── model.pkl # Trained ML model
-│ └── label_mappings.json.gz # Label mappings if needed
-│
-├── src/
-│ ├── data_preprocessing.py # Preprocessing functions
-│ ├── train_model.py # Model training & saving
-│ └── prediction_pipeline.py # Prediction function
-│
-├── venv/ # Virtual environment (not pushed to GitHub)
-├── requirements.txt # List of required packages
-├── README.md # This file
-└── .gitignore # Files to ignore in Git
+│   ├── model.pkl
+│   ├── scaler.pkl
+│   └── encoders.pkl
+├── data/
+│   └── heart.csv
+├── EDA/
+│   └── heart failure prediction.ipynb
+├── streamlit_app.py
+├── train_model.py
+├── app.py
+├── requirements.txt
+├── .gitignore
+├── test_api.py
+├── test_post.py
+└── README.md
+---
 
+☁️ Deployment Details
+
+🔹 Flask API on AWS EC2 (Free Tier)
+🔹 Streamlit App on Streamlit Cloud
 
 
 ✍️ Author
